@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="loadingScreen  justify-content-center align-items-center position-fixed top-0 bottom-0 start-0 end-0 bg-black">
+      <i class="fa-solid fa-spin fa-spinner text-white fa-7x "></i>
+    </div>
+
+    <section>
+        <div class="sideBar d-flex justify-content-center   ">
+            <div class="navMenue d-flex justify-content-between flex-column">
+                <div class="linkNav overflow-hidden ">
+                    <ul class="">
+                        <li  onclick="showSearchInputs()" class="  position-relative">Search</li>
+                        <li onclick="getCateg()" class="position-relative" >Categories</li>
+                        <li onclick="getArea()" class="  position-relative">Area</li>
+                        <li onclick="getIngredients()" class="  position-relative">Ingredients</li>
+                        <li onclick="showContacts()" class="  position-relative">Contact Us</li>
+                    </ul>
+                </div>
+                 <div class="nav-footer text-white me-2">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook "></i>     
+                   <i class="fa-brands fa-twitter mx-1"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer">
+                    <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                </div>
+            </div>
+            </div>
+         <div class="navHeader bg-white  d-flex flex-column justify-content-between align-content-center">
+            <img src="imgs/imads mealify01 (1).png" alt="logo"  class="logo">
+            <i class="fa-solid open-close-icon fa-2x fa-align-justify "></i>
+            <div>
+                <i class="fa-solid fa-globe d-block  my-1"></i>
+                <i class="fa-solid fa-share-nodes  mb-4"></i>
+            </div>
+        </div>
+           
+        </div>
+       
+    </section>
+
+
+
+   
+    <div class="container">
+        <div class="row py-4 i" id="searchInput">
+            <div class="col-md-6 ">
+                <input onkeyup="searchByName(this.value)" class="form-control bg-transparent text-white" type="text" placeholder="Search By Name">
+            </div>
+            <div class="col-md-6">
+                <input onkeyup="searchByFLetter(this.value)" maxlength="1" class="form-control bg-transparent text-white" type="text" placeholder="Search By First Letter">
+            </div>
+        </div>
+       </div>
+
+    <div class="container  ">
+        <div class="row py-5 g-4" id="rowData">
+         <!-- <div class="col-md-3">
+            <div class="mealContain" >
+                <img src="" alt="">
+                <div class="meal-Layer">
+                    <h4></h4>
+                </div>
+            </div>
+         </div> -->
+        </div>
+        </div>
+
+       
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
