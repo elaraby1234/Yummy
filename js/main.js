@@ -1,5 +1,5 @@
 ///<reference types="../@types/jquery"/>
-// let allMeals = [];
+
 let searchInput=document.getElementById('searchInput')
 let rowData =document.getElementById("rowData");
 let submitBtn;
@@ -167,9 +167,9 @@ async function searchByName(term) {
 }
 
 async function searchByFLetter(term) {
-     searchInput.innerHTML = ""
+    closeNavSide()
+    rowData.innerHTML=""
     $(".loadingScreen").fadeIn(300)
-     searchInput.innerHTML = ""
     term == "" ? term = "a" : "";
     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${term}`)
     let finalresponse = await response.json()
@@ -393,6 +393,7 @@ rowData.innerHTML=cartona;
 
 
 function showContacts() {
+    $(".loadingScreen").fadeIn(300)
     rowData.innerHTML = `<div class="contact min-vh-100 d-flex justify-content-center align-items-center">
     <div class="container w-75 text-center">
         <div class="row g-4">
@@ -462,6 +463,8 @@ function showContacts() {
     document.getElementById("repasswordInput").addEventListener("focus", () => {
         repasswordInputTouched = true
     })
+    closeNavSide();
+    $(".loadingScreen").fadeOut(900)
 }
 
 let nameInputTouched = false;
